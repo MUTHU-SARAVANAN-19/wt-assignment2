@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Admission Registration Portal</title>
+  <!-- Link to External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="registration-wrapper">
+    <!-- Header Section -->
+    <header class="form-header">
+      <div class="logo-badge">🎓</div>
+      <h1>Student Admission Portal</h1>
+      <p class="subtitle">Complete the form below to register for the academic session 2026-2027</p>
+    </header>
+
+    <!-- Student Registration Form -->
+    <!-- novalidate disables browser default bubbles so our custom JS validation runs -->
+    <form id="studentRegistrationForm" class="student-form" novalidate>
+      
+      <!-- Alert Message Box (Hidden by default, shown on successful submission or form error) -->
+      <div id="formAlert" class="alert-box hidden"></div>
+
+      <!-- Field: Full Name -->
+      <div class="form-group" id="group-fullName">
+        <label for="fullName">Full Name <span class="required">*</span></label>
+        <div class="input-container">
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Aarav Sharma" autocomplete="name">
+        </div>
+        <small class="error-msg" id="error-fullName"></small>
+      </div>
+
+      <!-- Field: Roll Number -->
+      <div class="form-group" id="group-rollNo">
+        <label for="rollNo">Roll Number / Registration ID <span class="required">*</span></label>
+        <div class="input-container">
+          <input type="text" id="rollNo" name="rollNo" placeholder="e.g. CS202601" autocomplete="off">
+        </div>
+        <small class="error-msg" id="error-rollNo"></small>
+      </div>
+
+      <!-- Field: Email Address -->
+      <div class="form-group" id="group-email">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <div class="input-container">
+          <input type="email" id="email" name="email" placeholder="e.g. student@college.edu" autocomplete="email">
+        </div>
+        <small class="error-msg" id="error-email"></small>
+      </div>
+
+      <!-- Field: Course Selection -->
+      <div class="form-group" id="group-course">
+        <label for="course">Admitted Course <span class="required">*</span></label>
+        <div class="input-container">
+          <select id="course" name="course">
+            <option value="">-- Select an Academic Course --</option>
+            <option value="Computer Science & Engineering">B.E. Computer Science & Engineering</option>
+            <option value="Information Technology">B.Tech Information Technology</option>
+            <option value="Electronics & Communication">B.E. Electronics & Communication</option>
+            <option value="Mechanical Engineering">B.E. Mechanical Engineering</option>
+            <option value="Data Science & AI">B.Tech Data Science & AI</option>
+          </select>
+        </div>
+        <small class="error-msg" id="error-course"></small>
+      </div>
+
+      <!-- Field: Profile Photo / ID Document Upload -->
+      <div class="form-group" id="group-fileUpload">
+        <label for="fileUpload">Upload Profile Photo / ID Proof <span class="required">*</span></label>
+        <div class="file-drop-area">
+          <input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.jpeg,.png,.pdf">
+          <div class="file-hint">Accepted Formats: JPG, PNG, PDF (Max size: 2MB)</div>
+        </div>
+        <small class="error-msg" id="error-fileUpload"></small>
+      </div>
+
+      <!-- Field: Password with Strength Meter -->
+      <div class="form-group" id="group-password">
+        <label for="password">Create Password <span class="required">*</span></label>
+        <div class="input-container">
+          <input type="password" id="password" name="password" placeholder="Minimum 8 characters" autocomplete="new-password">
+        </div>
+        
+        <!-- Dynamic Password Strength Indicator -->
+        <div class="strength-meter-container">
+          <div class="strength-bar-track">
+            <div id="strengthBar" class="strength-bar"></div>
+          </div>
+          <div class="strength-label">
+            Strength: <span id="strengthText">None</span>
+          </div>
+        </div>
+
+        <!-- Password Checklist Requirements -->
+        <ul class="password-criteria" id="passwordCriteria">
+          <li id="crit-length">At least 8 characters</li>
+          <li id="crit-uppercase">At least one uppercase letter (A-Z)</li>
+          <li id="crit-lowercase">At least one lowercase letter (a-z)</li>
+          <li id="crit-number">At least one number (0-9)</li>
+          <li id="crit-special">At least one special character (@, $, !, %, etc.)</li>
+        </ul>
+        <small class="error-msg" id="error-password"></small>
+      </div>
+
+      <!-- Field: Confirm Password -->
+      <div class="form-group" id="group-confirmPassword">
+        <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+        <div class="input-container">
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" autocomplete="new-password">
+        </div>
+        <small class="error-msg" id="error-confirmPassword"></small>
+      </div>
+
+      <!-- Submit and Reset Buttons -->
+      <div class="button-group">
+        <button type="submit" id="submitBtn" class="btn btn-primary">Complete Registration</button>
+        <button type="reset" id="resetBtn" class="btn btn-secondary">Clear Form</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Link to External Validation Script -->
+  <script src="script.js"></script>
+</body>
+</html>

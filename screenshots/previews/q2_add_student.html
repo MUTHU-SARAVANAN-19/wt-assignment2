@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Student - Admin Panel</title>
+  <link rel="stylesheet" href="../../q2_php_admin/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">🏛 College Admin Portal</div>
+    <div class="nav-links">
+      <a href="#">Dashboard</a>
+      <a href="#">+ Add Student</a>
+    </div>
+  </nav>
+
+  <div class="container" style="max-width: 750px;">
+    
+    <div class="page-header">
+      <h2>Add New Student Record</h2>
+      <a href="#" class="btn btn-secondary">← Back to List</a>
+    </div>
+
+    <div class="card">
+      <form>
+        <div class="form-grid">
+          
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" value="Rahul Verma" placeholder="e.g. Rahul Verma">
+          </div>
+
+          <div class="form-group">
+            <label for="roll_no">Roll Number *</label>
+            <input type="text" id="roll_no" name="roll_no" value="CS202610" placeholder="e.g. CS202610">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" value="rahul.verma@college.edu" placeholder="e.g. rahul@college.edu">
+          </div>
+
+          <div class="form-group">
+            <label for="course">Academic Course *</label>
+            <select id="course" name="course">
+              <option value="Computer Science" selected>Computer Science</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Electronics & Comm.">Electronics & Comm.</option>
+              <option value="Mechanical Engg.">Mechanical Engg.</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="photo">Profile Photo (Image)</label>
+            <input type="file" id="photo" name="photo">
+            <span class="file-help">JPG or PNG, max 2MB. Unique filename generated automatically.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="document">Verification Document (ID / Certificate)</label>
+            <input type="file" id="document" name="document">
+            <span class="file-help">PDF, JPG, or PNG. Metadata logged into database.</span>
+          </div>
+
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+          <button type="button" class="btn btn-primary" style="flex: 1;">Save Student Record</button>
+          <a href="#" class="btn btn-secondary">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

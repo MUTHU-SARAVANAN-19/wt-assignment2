@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profiles Portal</title>
+    <link rel="stylesheet" href="../../q3_servlet_portal/web/style.css">
+</head>
+<body>
+
+    <!-- Portal Navigation Bar with Active Session Info -->
+    <header class="portal-nav">
+        <div class="nav-brand">🎓 Academic Student Portal</div>
+        <div class="user-session">
+            <span class="welcome-text">Logged in as: <strong>admin</strong></span>
+            <a href="#" class="btn btn-outline btn-sm">Sign Out</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="portal-banner">
+            <h2>Enrolled Student Directory</h2>
+            <p>Displaying student profiles and streamed documents via Java Servlets &amp; JDBC</p>
+        </div>
+
+        <!-- Student Profiles Grid -->
+        <div class="cards-grid">
+            
+            <!-- Student 1 Card -->
+            <article class="student-profile-card">
+                <div class="card-header">
+                    <div class="avatar-wrap">
+                        <img src="../../q2_php_admin/uploads/student_1_photo.png" alt="Aarav Sharma" class="student-avatar">
+                    </div>
+                    <div class="student-meta">
+                        <h3 class="student-name">Aarav Sharma</h3>
+                        <div class="meta-tags">
+                            <span class="badge badge-roll">CS202601</span>
+                            <span class="badge badge-course">Computer Science</span>
+                        </div>
+                        <p class="student-email">✉ aarav.sharma@college.edu</p>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h4 class="section-subtitle">Uploaded Verification Documents:</h4>
+                    <ul class="documents-list">
+                        <li class="doc-item">
+                            <div class="doc-info">
+                                <span class="doc-icon">📄</span>
+                                <div>
+                                    <div class="doc-name">Aadhaar_ID_Proof.pdf</div>
+                                    <div class="doc-size">150.6 KB • 2026-10-22</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-stream btn-sm">View / Stream</a>
+                        </li>
+                        <li class="doc-item">
+                            <div class="doc-info">
+                                <span class="doc-icon">📄</span>
+                                <div>
+                                    <div class="doc-name">HSC_MarkSheet.pdf</div>
+                                    <div class="doc-size">235.4 KB • 2026-10-22</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-stream btn-sm">View / Stream</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <small>Enrolled on: 2026-10-22 10:15:00</small>
+                </div>
+            </article>
+
+            <!-- Student 2 Card -->
+            <article class="student-profile-card">
+                <div class="card-header">
+                    <div class="avatar-wrap">
+                        <img src="../../q2_php_admin/uploads/student_2_photo.png" alt="Priya Patel" class="student-avatar">
+                    </div>
+                    <div class="student-meta">
+                        <h3 class="student-name">Priya Patel</h3>
+                        <div class="meta-tags">
+                            <span class="badge badge-roll">IT202602</span>
+                            <span class="badge badge-course">Information Tech</span>
+                        </div>
+                        <p class="student-email">✉ priya.patel@college.edu</p>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h4 class="section-subtitle">Uploaded Verification Documents:</h4>
+                    <ul class="documents-list">
+                        <li class="doc-item">
+                            <div class="doc-info">
+                                <span class="doc-icon">📄</span>
+                                <div>
+                                    <div class="doc-name">Passport_Copy.pdf</div>
+                                    <div class="doc-size">185.0 KB • 2026-10-22</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-stream btn-sm">View / Stream</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <small>Enrolled on: 2026-10-22 10:20:15</small>
+                </div>
+            </article>
+
+            <!-- Student 3 Card -->
+            <article class="student-profile-card">
+                <div class="card-header">
+                    <div class="avatar-wrap">
+                        <img src="../../q2_php_admin/uploads/student_3_photo.png" alt="Muthu Saravanan" class="student-avatar">
+                    </div>
+                    <div class="student-meta">
+                        <h3 class="student-name">Muthu Saravanan</h3>
+                        <div class="meta-tags">
+                            <span class="badge badge-roll">EC202603</span>
+                            <span class="badge badge-course">Electronics &amp; Comm</span>
+                        </div>
+                        <p class="student-email">✉ muthu.s@college.edu</p>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h4 class="section-subtitle">Uploaded Verification Documents:</h4>
+                    <ul class="documents-list">
+                        <li class="doc-item">
+                            <div class="doc-info">
+                                <span class="doc-icon">📄</span>
+                                <div>
+                                    <div class="doc-name">Transfer_Certificate.pdf</div>
+                                    <div class="doc-size">128.9 KB • 2026-10-22</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-stream btn-sm">View / Stream</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <small>Enrolled on: 2026-10-22 10:25:30</small>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
